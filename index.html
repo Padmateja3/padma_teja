@@ -3,139 +3,250 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Podugu Padma Teja</title>
+  <meta name="description" content="Portfolio of Podugu Padma Teja — Full-Stack Developer & Software Engineer (Fresher), Hyderabad." />
+  <title>Podugu Padma Teja | Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="bg"></canvas>
+  <div class="cursor-glow" id="cursor-glow"></div>
+  <div class="progress" id="progress"></div>
+
   <!-- Navbar -->
-  <nav>
-    <a href="#"><span class="logo nav__logo">Padma</span> Teja</a>
+  <nav id="navbar">
+    <a href="#home" class="nav__brand"><span class="grad">Padma</span> Teja</a>
     <ul class="nav__links" id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact" class="btn">Contact</a></li>
+      <li><a href="#experience">Journey</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact" class="btn btn--sm">Contact</a></li>
     </ul>
-    <div class="nav__menu__btn" id="menu-btn">
-      <i class="ri-menu-3-line" style="font-size:24px;color:white;"></i>
-    </div>
+    <button class="nav__menu__btn" id="menu-btn" aria-label="Toggle menu"><i class="ri-menu-3-line"></i></button>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="section__container header__container" id="home">
-    <div class="header__image">
-      <div class="glow-border">
-        <img src="teja.jpg" alt="Teja" />
+  <!-- Hero -->
+  <header class="section hero" id="home">
+    <div class="hero__content reveal">
+      <span class="chip"><i class="ri-flashlight-fill"></i> Open to work — Entry-level roles</span>
+      <h1>Hi, I'm <span class="grad">Podugu Padma Teja</span></h1>
+      <h2 class="typing"><span id="typed"></span><span class="caret"></span></h2>
+      <p class="lead">
+        Software Engineer (Fresher) with a strong foundation in Data Structures, OOP and full-stack web development.
+        I build responsive, scalable and performance-optimized applications with React.js, JavaScript, Python, Java and SQL.
+      </p>
+      <div class="hero__btns">
+        <a href="assets/Teja_Resume.pdf" target="_blank" class="btn"><i class="ri-download-2-line"></i> Download Resume</a>
+        <a href="#contact" class="btn btn--ghost"><i class="ri-send-plane-fill"></i> Hire Me</a>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/padma-teja-podugu-958476348" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+        <a href="https://github.com/Padmateja3" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+        <a href="https://wa.me/917013544848" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ri-whatsapp-fill"></i></a>
+        <a href="mailto:padmateja333@gmail.com" aria-label="Email"><i class="ri-mail-fill"></i></a>
       </div>
     </div>
-    <div class="header__content">
-      <h1>Podugu Padma Teja<br>Full-Stack Developer</h1>
-      <p class="section__description">
-        Detail-oriented Software Developer with experience in frontend and backend web development.
-        Skilled in HTML, CSS, JavaScript, React.js, Python, SQL, and Java. Passionate about building scalable, responsive, and performance-optimized applications.
-      </p>
-      <div class="header__btn">
-        <a href="assets/Teja_Resume.pdf" target="_blank" class="btn">Download Resume</a>
-        <a href="#contact" class="btn">Hire Me</a>
-      </div>
-      <div class="social__icons">
-        <a href="https://www.linkedin.com/in/padma-teja-podugu-958476348" target="_blank"><i class="ri-linkedin-fill"></i></a>
-        <a href="https://github.com/Padmateja3" target="_blank"><i class="ri-github-fill"></i></a>
-        <a href="https://wa.me/917013544848" target="_blank"><i class="ri-whatsapp-fill"></i></a>
-        <a href="mailto:padmateja333@gmail.com"><i class="ri-mail-fill"></i></a>
+
+    <div class="hero__visual reveal">
+      <div class="tilt" data-tilt-max="14">
+        <div class="avatar">
+          <div class="avatar__ring"></div>
+          <img src="teja.jpg" alt="Podugu Padma Teja" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+          <div class="avatar__fallback">PT</div>
+        </div>
+        <div class="float-badge b1"><i class="ri-reactjs-line"></i> React.js</div>
+        <div class="float-badge b2"><i class="ri-database-2-line"></i> SQL</div>
+        <div class="float-badge b3"><i class="ri-braces-line"></i> Python</div>
       </div>
     </div>
   </header>
 
   <!-- About -->
-  <section class="section__container" id="about">
-    <h2 class="section__header">About Me</h2>
-    <p>
-      I’m Podugu Padma Teja, a passionate Full-Stack Developer with hands-on experience in creating responsive, scalable, and high-performance applications.
-      Proficient in frontend technologies like HTML, CSS, JavaScript, React.js, and backend skills with Python, SQL, and Java.
-      I enjoy solving complex problems and delivering optimized software solutions.
-    </p>
-  </section>
-
-  <!-- Experience -->
-  <section class="section__container" id="experience">
-    <h2 class="section__header">Internships & Certifications</h2>
-    <div class="service__grid">
-      <div class="service__card">
-        <h4>Salesforce Virtual Internship</h4>
+  <section class="section" id="about">
+    <h2 class="section__header reveal"><span>01.</span> About Me</h2>
+    <div class="about reveal">
+      <div class="glass spot about__text">
         <p>
-          Worked on Salesforce development, Apex, Lightning Web Components, and API integrations.
-          Earned superbadges in Apex Specialist and Process Automation Specialist.
+          I'm a Full-Stack Developer who enjoys turning ideas into clean, fast and user-friendly products.
+          I've built projects spanning machine learning, e-commerce and web development, designed RESTful API integrations,
+          and completed a Salesforce Developer virtual internship working with Apex and Lightning Web Components.
         </p>
-      </div>
-      <div class="service__card">
-        <h4>Certifications</h4>
         <p>
-          • Google Android Developer Virtual Internship<br>
-          • Cybersecurity Virtual Internship<br>
-          • AI Certificate powered by Google
+          I'm a fast learner with solid problem-solving skills, and I'm looking for an entry-level
+          <b>Software Developer / Software Engineer / Frontend Developer</b> role where I can contribute from day one.
         </p>
+        <div class="stats">
+          <div><h3 data-count="3">0</h3><span>Projects</span></div>
+          <div><h3 data-count="25" data-suffix="%">0</h3><span>Faster page load</span></div>
+          <div><h3 data-count="20" data-suffix="%">0</h3><span>Model accuracy gain</span></div>
+          <div><h3 data-count="2">0</h3><span>Superbadges</span></div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="section__container portfolio__container" id="projects">
-    <h2 class="section__header">Projects</h2>
-    <div class="portfolio__grid">
-      <div class="portfolio__card">
-        <h3>Power Bill Prediction (AI & ML)</h3>
-        <p>Built a predictive model using Python, Linear Regression, and Random Forest to estimate electricity bills accurately.</p>
-        <a href="https://github.com/Padmateja3/PowerBillPrediction" target="_blank">View Project</a>
-      </div>
-      <div class="portfolio__card">
-        <h3>E-commerce Website (React.js)</h3>
-        <p>Developed a responsive e-commerce site with product listings, cart, and checkout flow using React Router and REST APIs.</p>
-        <a href="https://github.com/Padmateja3/E-commerce-website" target="_blank">View Project</a>
-      </div>
-      <div class="portfolio__card">
-        <h3>Keyboard Warrior — Typing Speed Game</h3>
-        <p>Created a browser-based typing game to improve typing speed and accuracy with real-time scoring and animations.</p>
-        <a href="https://github.com/Padmateja3/KeyBoardWarrior" target="_blank">View Repo</a>
+      <div class="cube-wrap">
+        <div class="cube" id="cube">
+          <div class="face front">React</div>
+          <div class="face back">Python</div>
+          <div class="face right">Java</div>
+          <div class="face left">SQL</div>
+          <div class="face top">JS</div>
+          <div class="face bottom">Git</div>
+        </div>
+        <p class="hint">Drag / hover the cube</p>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="section__container" id="skills">
-    <h2 class="section__header">Skills</h2>
-    <div class="service__grid">
-      <div class="service__card"><b>Frontend:</b><br>HTML, CSS, JavaScript, Bootstrap, React.js</div>
-      <div class="service__card"><b>Backend:</b><br>Python, Java, SQL</div>
-      <div class="service__card"><b>Frameworks:</b><br>React.js, REST APIs</div>
-      <div class="service__card"><b>Tools:</b><br>Git, GitHub, VS Code, Eclipse</div>
-      <div class="service__card"><b>Office Tools:</b><br>Excel, Word, PowerPoint</div>
-      <div class="service__card"><b>Soft Skills:</b><br>Teamwork, Problem-Solving, Creativity</div>
+  <section class="section" id="skills">
+    <h2 class="section__header reveal"><span>02.</span> Technical Skills</h2>
+    <div class="grid skills">
+      <div class="glass spot card tilt reveal"><i class="ri-code-s-slash-line"></i><h4>Languages</h4>
+        <div class="tags"><span>JavaScript</span><span>Python</span><span>Java</span><span>SQL</span><span>HTML</span><span>CSS</span></div></div>
+      <div class="glass spot card tilt reveal"><i class="ri-layout-masonry-line"></i><h4>Frontend</h4>
+        <div class="tags"><span>React.js</span><span>Bootstrap</span><span>DOM Manipulation</span><span>Responsive Design</span></div></div>
+      <div class="glass spot card tilt reveal"><i class="ri-server-line"></i><h4>Backend &amp; APIs</h4>
+        <div class="tags"><span>RESTful APIs</span><span>OOP</span><span>SQL Database</span></div></div>
+      <div class="glass spot card tilt reveal"><i class="ri-tools-line"></i><h4>Tools &amp; Platforms</h4>
+        <div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Eclipse</span><span>Salesforce (Apex, LWC)</span></div></div>
+      <div class="glass spot card tilt reveal"><i class="ri-node-tree"></i><h4>Core Concepts</h4>
+        <div class="tags"><span>Data Structures &amp; Algorithms</span><span>OOP</span><span>Agile / SDLC</span></div></div>
+      <div class="glass spot card tilt reveal"><i class="ri-team-line"></i><h4>Strengths</h4>
+        <div class="tags"><span>Fast Learner</span><span>Problem Solving</span><span>Teamwork</span><span>Ownership</span><span>Communication</span><span>Attention to Detail</span></div></div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section class="section" id="experience">
+    <h2 class="section__header reveal"><span>03.</span> Internship, Education &amp; Certifications</h2>
+    <div class="two-col">
+      <div>
+        <h3 class="sub reveal"><i class="ri-briefcase-4-line"></i> Experience</h3>
+        <div class="timeline">
+          <div class="t-item reveal glass spot">
+            <span class="date">Virtual Internship</span>
+            <h4>Salesforce Developer</h4>
+            <ul>
+              <li>Developed on Salesforce CRM using Apex and Lightning Web Components (LWC)</li>
+              <li>Automated business workflows with process automation</li>
+              <li>Performed API integrations to streamline operations</li>
+              <li>Earned <b>Apex Specialist</b> &amp; <b>Process Automation Specialist</b> Superbadges</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="sub reveal"><i class="ri-award-line"></i> Certifications</h3>
+        <div class="timeline">
+          <div class="t-item reveal glass spot"><h4>Artificial Intelligence — Google</h4></div>
+          <div class="t-item reveal glass spot"><h4>Cybersecurity Virtual Internship</h4></div>
+          <div class="t-item reveal glass spot"><h4>Google Android Developer Virtual Internship</h4></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="sub reveal"><i class="ri-graduation-cap-line"></i> Education</h3>
+        <div class="timeline">
+          <div class="t-item reveal glass spot">
+            <span class="date">2020 – 2024</span>
+            <h4>B.Tech, Computer Science &amp; Engineering</h4>
+            <p>Avanthi Institute of Engineering and Technology, Vizianagaram</p>
+            <span class="pill">CGPA 8.0</span>
+          </div>
+          <div class="t-item reveal glass spot">
+            <span class="date">2018 – 2020</span>
+            <h4>Higher Secondary Certificate (MPC)</h4>
+            <p>Narayana Junior College, Visakhapatnam</p>
+            <span class="pill">CGPA 9.57</span>
+          </div>
+          <div class="t-item reveal glass spot">
+            <span class="date">2017 – 2018</span>
+            <h4>Secondary School Certificate (SSC)</h4>
+            <p>Bhaskar English Medium School, Parvathipuram</p>
+            <span class="pill">CGPA 10.0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <h2 class="section__header reveal"><span>04.</span> Featured Projects</h2>
+    <div class="grid projects">
+      <article class="glass spot card tilt reveal" data-tilt-max="10">
+        <div class="card__icon"><i class="ri-shopping-cart-2-line"></i></div>
+        <h3>E-Commerce Web Application</h3>
+        <p class="stack">React.js · JavaScript · REST APIs</p>
+        <ul>
+          <li>Responsive full-stack store with product listing, cart and checkout</li>
+          <li>Integrated REST APIs to dynamically fetch and render product data</li>
+          <li>Reusable component-based UI for better maintainability</li>
+          <li>Cut page load time by ~25%; cross-browser &amp; mobile ready</li>
+        </ul>
+        <a class="btn btn--sm" href="https://github.com/Padmateja3/E-commerce-website" target="_blank" rel="noopener"><i class="ri-github-fill"></i> View Project</a>
+      </article>
+
+      <article class="glass spot card tilt reveal" data-tilt-max="10">
+        <div class="card__icon"><i class="ri-line-chart-line"></i></div>
+        <h3>Power Bill Prediction (ML)</h3>
+        <p class="stack">Python · SQL · Linear Regression · Random Forest</p>
+        <ul>
+          <li>Predicts electricity consumption with Linear Regression &amp; Random Forest</li>
+          <li>Data preprocessing, feature engineering and model evaluation</li>
+          <li>Hyperparameter tuning improved accuracy by ~20%</li>
+        </ul>
+        <a class="btn btn--sm" href="https://github.com/Padmateja3/PowerBillPrediction" target="_blank" rel="noopener"><i class="ri-github-fill"></i> View Project</a>
+      </article>
+
+      <article class="glass spot card tilt reveal" data-tilt-max="10">
+        <div class="card__icon"><i class="ri-restaurant-2-line"></i></div>
+        <h3>Restaurant Web Application</h3>
+        <p class="stack">HTML · CSS · JavaScript</p>
+        <ul>
+          <li>Responsive food-ordering site with dynamic menu display</li>
+          <li>DOM manipulation for content rendering and filtering</li>
+          <li>Mobile-first layouts using Flexbox &amp; Grid</li>
+        </ul>
+        <a class="btn btn--sm" href="https://github.com/Padmateja3" target="_blank" rel="noopener"><i class="ri-github-fill"></i> View on GitHub</a>
+      </article>
+
+      <article class="glass spot card tilt reveal" data-tilt-max="10">
+        <div class="card__icon"><i class="ri-keyboard-box-line"></i></div>
+        <h3>Keyboard Warrior — Typing Game</h3>
+        <p class="stack">JavaScript · HTML · CSS</p>
+        <ul>
+          <li>Browser-based typing game to improve speed and accuracy</li>
+          <li>Real-time scoring with smooth animations</li>
+        </ul>
+        <a class="btn btn--sm" href="https://github.com/Padmateja3/KeyBoardWarrior" target="_blank" rel="noopener"><i class="ri-github-fill"></i> View Repo</a>
+      </article>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="section__container" id="contact">
-    <h2 class="section__header">Contact Me</h2>
-    <p>Email: <b>padmateja333@gmail.com</b></p>
-    <p>Phone / WhatsApp: <b>+91 7013544848</b></p>
-    <p>Location: <b>Hyderabad, India</b></p>
-    <div class="contact__socials">
-      <a href="mailto:padmateja1127@gmail.com"><i class="ri-mail-fill"></i></a>
-      <a href="https://wa.me/917013544848" target="_blank"><i class="ri-whatsapp-fill"></i></a>
-      <a href="https://github.com/Padmateja3" target="_blank"><i class="ri-github-fill"></i></a>
-      <a href="https://www.linkedin.com/in/padma-teja-podugu-958476348" target="_blank"><i class="ri-linkedin-fill"></i></a>
+  <section class="section" id="contact">
+    <h2 class="section__header reveal"><span>05.</span> Let's Work Together</h2>
+    <div class="glass spot contact reveal">
+      <p class="lead">I'm actively looking for entry-level Software Developer / Frontend roles. Let's talk!</p>
+      <div class="contact__grid">
+        <a href="mailto:padmateja333@gmail.com"><i class="ri-mail-fill"></i><span>padmateja333@gmail.com</span></a>
+        <a href="https://wa.me/917013544848" target="_blank" rel="noopener"><i class="ri-whatsapp-fill"></i><span>+91 70135 44848</span></a>
+        <a href="#contact"><i class="ri-map-pin-2-fill"></i><span>Hyderabad, Telangana, India</span></a>
+      </div>
+      <div class="social center">
+        <a href="mailto:padmateja333@gmail.com" aria-label="Email"><i class="ri-mail-fill"></i></a>
+        <a href="https://wa.me/917013544848" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ri-whatsapp-fill"></i></a>
+        <a href="https://github.com/Padmateja3" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+        <a href="https://www.linkedin.com/in/padma-teja-podugu-958476348" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+      </div>
     </div>
   </section>
 
-  <footer class="footer">© 2025 Podugu Padma Teja — All Rights Reserved</footer>
+  <footer class="footer">© 2026 Podugu Padma Teja — All Rights Reserved</footer>
 
-  <!-- JS -->
-  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
